@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <title>Az első GitHub weboldalam</title>
+<meta charset="UTF-8">
+<title>Weboldalam</title>
+
+<style>
+/* ===== Alap ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Fejléc ===== */
+header {
+  background: #1e1e1e;
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== Menü ===== */
+.menu {
+  position: relative;
+}
+
+.menu-button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background: #555;
+}
+
+/* ===== Legördülő lista ===== */
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background: #2b2b2b;
+  min-width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.menu-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-content a:hover {
+  background: #444;
+}
+
+/* ===== Megjelenítés hoverre ===== */
+.menu:hover .menu-content {
+  display: block;
+}
+</style>
 </head>
+
 <body>
-  <h1>Üdvözöllek!</h1>
-  <p>Ez az első GitHub Pages weboldalam.</p>
+
+<header>
+  <div class="menu">
+    <button class="menu-button">☰ Menü</button>
+    <div class="menu-content">
+      <a href="#">1. Kezdőlap</a>
+      <a href="#">2. Projektjeim</a>
+      <a href="#">3. SDR</a>
+      <a href="#">4. Rádiócsillagászat</a>
+      <a href="#">5. Hidrogénvonal</a>
+      <a href="#">6. SSTV</a>
+      <a href="#">7. Antennák</a>
+      <a href="#">8. Mérések</a>
+      <a href="#">9. Galéria</a>
+      <a href="#">10. Kapcsolat</a>
+    </div>
+  </div>
+</header>
+
+<main style="padding:20px;">
+  <h1>Kezdőlap</h1>
+  <p>Itt lesz az oldal tartalma.</p>
+</main>
+
 </body>
 </html>
+
