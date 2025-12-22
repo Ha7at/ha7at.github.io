@@ -5,7 +5,6 @@
 <title>Weboldalam</title>
 
 <style>
-/* ===== Alap ===== */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -61,8 +60,8 @@ header {
   background: #444;
 }
 
-/* ===== Megjelenítés hoverre ===== */
-.menu:hover .menu-content {
+/* ===== Aktív állapot ===== */
+.menu.active .menu-content {
   display: block;
 }
 </style>
@@ -71,8 +70,8 @@ header {
 <body>
 
 <header>
-  <div class="menu">
-    <button class="menu-button">☰ Menü</button>
+  <div class="menu" id="menu">
+    <button class="menu-button" onclick="toggleMenu()">☰ Menü</button>
     <div class="menu-content">
       <a href="#">1. Kezdőlap</a>
       <a href="#">2. Projektjeim</a>
@@ -93,6 +92,19 @@ header {
   <p>Itt lesz az oldal tartalma.</p>
 </main>
 
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+
+/* kattintás máshol → bezár */
+document.addEventListener("click", function(e) {
+  const menu = document.getElementById("menu");
+  if (!menu.contains(e.target)) {
+    menu.classList.remove("active");
+  }
+});
+</script>
+
 </body>
 </html>
-
